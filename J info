@@ -1,0 +1,26 @@
+✔️ How Jenkins fits in
+
+Your Jenkins Jenkinsfile from earlier stays mostly the same:
+
+Builds Docker image
+
+Pushes to ECR
+
+Runs terraform apply to update EC2
+
+The EC2 instance pulls the new image via user-data or SSM
+
+
+
+
+
+
+
+
+If you want zero-downtime rolling updates, I can generate:
+
+An Auto Scaling Group + Launch Template
+
+ALB (Application Load Balancer)
+
+Rolling deployment strategy

@@ -1,0 +1,11 @@
+IAM permissions needed for Jenkins
+
+Make sure Jenkins credentials include an IAM user/role with:
+
+AmazonEC2ContainerRegistryFullAccess
+
+AmazonECS_FullAccess
+
+AmazonS3FullAccess (if Terraform state is in S3)
+
+IAMFullAccess (optional, depending on your setup)
