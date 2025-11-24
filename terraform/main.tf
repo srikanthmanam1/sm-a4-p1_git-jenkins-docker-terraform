@@ -219,7 +219,7 @@ resource "aws_security_group" "allow_ssh" {
 #  tags = {
 #    Name = "${var.app_name}-ec2"
 #  }
-}
+#}
 # ---------------------------
 # Create an EC2 instance
 resource "aws_instance" "web" {
