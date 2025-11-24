@@ -24,7 +24,7 @@ pipeline {
             }
         }
 
-        stage('Run Docker Container') {
+/*        stage('Run Docker Container') {
             steps {
                 echo 'Run Docker Container'
                 script {
@@ -32,6 +32,7 @@ pipeline {
                 }
             }
         }
+*/
 /*        stage('AWS ECR Login') {
             steps {
                 sh """
