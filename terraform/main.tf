@@ -1,12 +1,9 @@
-provider "aws" {
-  region = var.aws_region
-}
 # ---------------------------
 #  ECR Repository
 # ---------------------------
-resource "aws_ecr_repository" "app_repo" {
-  name = var.app_name
-}
+#resource "aws_ecr_repository" "app_repo" {
+#  name = var.app_name
+#}
 
 # ---------------------------
 #  VPC + Subnet (simple setup)
@@ -70,7 +67,7 @@ resource "aws_route_table" "rtable" {
 }
 
 #resource "aws_route_table" "public" {
-#  vpc_id = aws_vpc.main.id
+# vpc_id = aws_vpc.main.id
 #}
 
 #resource "aws_route" "internet_access" {
@@ -231,7 +228,7 @@ resource "aws_instance" "web" {
   subnet_id     = aws_subnet.main.id
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   # ---------------------------
-  iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
+  #iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
   # ---------------------------
   associate_public_ip_address = true  # <--- Ensures a public IP is assigned for instance. Overrides subnet setting
 
