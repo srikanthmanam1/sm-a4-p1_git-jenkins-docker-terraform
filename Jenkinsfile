@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    options {
+        timestamps()
+    }
     environment {
         AWS_REGION = "us-east-2"
         REPO_NAME = "sm-devops-app2"
