@@ -24,6 +24,14 @@ pipeline {
             }
         }
 
+        stage('Run Docker Container') {
+            steps {
+                echo 'Run Docker Container'
+                script {
+                    sh 'docker run --rm ${REPO_NAME}:latest'
+                }
+            }
+        }
 /*        stage('AWS ECR Login') {
             steps {
                 sh """
