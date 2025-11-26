@@ -2,11 +2,11 @@ variable "aws_region" {
   default = "us-east-2"
 }
 
-variable "aws_account_id" {
+/*variable "aws_account_id" {
   description = "Your AWS account ID"
 # description = "760474663805"
 }
-
+*/
 variable "app_name" {
   #default = "sample-ci-cd-app"
   default = "sm-devops-app1"
