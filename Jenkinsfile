@@ -63,7 +63,14 @@ pipeline {
                 """
             }
         }
-
+        stage('Terraform Plan') {
+            steps {
+                sh """
+                  cd terraform
+                  terraform plan
+                """
+            }
+        }
         stage('Terraform Apply') {
             steps {
                 sh """
