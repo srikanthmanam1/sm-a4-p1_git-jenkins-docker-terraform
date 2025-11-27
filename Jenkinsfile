@@ -1,9 +1,9 @@
 pipeline {
     agent any
     
-    //options {
-    //    timestamps()
-    //}
+    options {
+        timestamps()
+    }
     
     environment {
         AWS_REGION = "us-east-2"
