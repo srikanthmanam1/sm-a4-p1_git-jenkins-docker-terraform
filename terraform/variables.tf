@@ -21,9 +21,7 @@ variable "app_name" {
   default = "sm-devops-app1"
 }
 
-/*
-variable "key_name" {
-  description = "Name of the existing AWS key pair"
-  type        = string
-}
-*/
+#variable "key_name" {
+#  description = "Name of the existing AWS key pair"
+#  type        = string
+#}
