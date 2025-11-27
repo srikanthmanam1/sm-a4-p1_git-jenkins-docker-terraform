@@ -8,7 +8,7 @@ pipeline {
     environment {
         AWS_REGION = "us-east-2"
         REPO_NAME = "sm-devops-app2"
-        AWS_ACCOUNT_ID = "1234567890123"
+        AWS_ACCOUNT_ID = "760474663805"
         //ECR_URL = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${REPO_NAME}"
     }
 
@@ -34,6 +34,24 @@ pipeline {
                 script {
                     sh 'docker run --rm ${REPO_NAME}:latest'
                 }
+            }
+        }
+*/
+/*        stage('AWS ECR Login') {
+            steps {
+                sh """
+                aws ecr get-login-password --region ${AWS_REGION} | \
+                  docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
+                """
+            }
+        }
+
+        stage('Tag & Push Image') {
+            steps {
+                sh """
+                  docker tag ${REPO_NAME}:latest ${ECR_URL}:latest
+                  docker push ${ECR_URL}:latest
+                """
             }
         }
 */
@@ -63,3 +81,4 @@ pipeline {
         }
     }
 }
+
