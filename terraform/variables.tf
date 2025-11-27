@@ -4,7 +4,6 @@ variable "aws_region" {
 
 /*variable "aws_account_id" {
   description = "Your AWS account ID"
-# description = "760474663805"
 }
 */
 variable "app_name" {
@@ -14,8 +13,8 @@ variable "app_name" {
 
 variable "instance_type" {
   description = "EC2 instance type"
-//  default     = "t3.large"
-  default     = "t2.micro"
+  default     = "t3.large"
+//  default     = "t2.micro"
 }
 
 variable "ami_id" {
